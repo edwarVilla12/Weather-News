@@ -1,0 +1,70 @@
+.weather {
+  text-align: center;
+}
+
+.row {
+  justify-content: center;
+  margin: 15px 0;
+}
+
+ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+  width: 98%;
+  margin: 0 auto;
+  background: rgb(180, 225, 240);
+}
+
+.all__news{
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.head__Text {
+  margin-top: 30px;
+}
+
+.news{
+  max-width: 500px;
+  padding: 30px;
+  border: 1px solid rgb(26, 9, 9);
+  border-radius: 5px;
+}
+
+.news__title{
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.news__desc {
+  padding-top: 10px;
+  line-height: 25px;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.news__author{
+  margin-right: 10px;
+  color: rgba(46, 5, 46, 0.932);
+}
+
+.news__published{
+  margin-right: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  color: rgb(5, 52, 66);
+}
+
+.news__source {
+  display: inline-block;
+  margin-top: 10px;
+  color: rgb(6, 59, 77);
+}
