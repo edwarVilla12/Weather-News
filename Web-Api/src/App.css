@@ -1,5 +1,6 @@
 .weather {
   text-align: center;
+  background-color: rgb(250, 250, 250); 
 }
 
 .row {
@@ -18,7 +19,7 @@ body{
   font-family: 'Times New Roman', Times, serif;
   width: 98%;
   margin: 0 auto;
-  background: rgb(180, 225, 240);
+  background-color: rgb(123, 205, 233);
 }
 
 .all__news{
