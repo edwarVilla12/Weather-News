@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import WeatherCard from './WeatherCard'
 
+// Component used to show the weather data.
 const WeatherList = ({weathers}) => {
     return (
         <Row>

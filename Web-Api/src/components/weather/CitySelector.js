@@ -3,7 +3,7 @@ import {Row, Col, FormControl, Button} from 'react-bootstrap';
 import {API_SERVER_URL} from '../../apis/config';
 import axios from 'axios';
 
-// used to create the server url for the data.server value.
+// constants used to create the server url for the data.server value.
 const api = "http://api.openweathermap.org//data/2.5/forecast?q=";
 const endpoint = "&cnt=5&appid=c0cb1c5d7eacb96bf56b49775efdc6ee";
 
@@ -14,10 +14,10 @@ const CitySelector = ({onSearch} ) => {
       id: '',
       city: '',
       server: ''
-  })
-
-    // post request to send data to the database
-    const postRequest=async(city)=>{
+    })
+   
+    // post request to send data (city - server)to the database
+    const postRequest=async()=>{
       delete data.id;
       data.city =  city;
       data.server = api + city + endpoint ;
@@ -36,7 +36,6 @@ const CitySelector = ({onSearch} ) => {
             <h1>Enter a city</h1>
           </Col>
         </Row>
-
         <Row>
           <Col xs={4}>
             <FormControl
@@ -51,9 +50,8 @@ const CitySelector = ({onSearch} ) => {
         <Row>
           <Col>
           <Button onClick={() => {
-            
               onSearch(city);
-           <div> {!city ? '': postRequest(city)} </div>  
+           <div> {!city ? '': postRequest()} </div>  
           
             }}
           >Weather Forecast</Button>

@@ -2,8 +2,10 @@ import React , {useContext} from 'react';
 import {NewsContext} from '../../hooks/NewsContext';
 import NewsArticle from './NewsArticle';
 
+// component used to deploy the news
 function News(props){
 
+    // Create a new context
     const {data}  = useContext(NewsContext);
     
     return(

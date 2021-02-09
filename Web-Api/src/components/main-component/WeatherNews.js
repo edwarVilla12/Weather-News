@@ -10,20 +10,21 @@ import News from '../news/News';
 import ServersList from '../servers/ServersList';
 
 /**
- * Main component used to enclose <News/>, <Server /> and <Weather/> components
+ * Main component used to encapsulate <News/>, <Server /> and <Weather/> components
  */
 const WeatherNews = () => {
-  const {data, error, isLoading, setUrl} = UseFetch();
+    
+    const {data, error, isLoading, setUrl} = UseFetch();
 
-// error handling for the <News/> component
-const getContent = () => {
-  if(error) return <h2>Error: {error}</h2>
-  if(!data && isLoading) return <h2>LOADING DATA, PLEASE WAIT...</h2>
-  if(!data) return null;
-  return <WeatherList weathers={data.list} />
-};
+    // error handling for the <News/> component
+    const getContent = () => {
+        if(error) return <h2>Error: {error}</h2>
+        if(!data && isLoading) return <h2>LOADING DATA, PLEASE WAIT...</h2>
+        if(!data) return null;
+        return <WeatherList weathers={data.list} />
+    };
 
-  /** Return the WeatherNews application */
+  /** Return the WeatherNews App */
   return (
     <div>
       <Container className="weather">
