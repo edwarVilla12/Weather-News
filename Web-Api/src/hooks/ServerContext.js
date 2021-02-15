@@ -2,7 +2,7 @@ import React, {createContext, useEffect, useState} from 'react';
 import axios from 'axios';
 import {API_SERVER_URL} from '../apis/config';
 
-// Server context instance
+// Server context instance {provider , consumer}
 export const ServerContext = createContext();
 
 // Execute the get request to the api (database)
@@ -14,20 +14,12 @@ export const ServerContextProvider = (props) => {
         city: '',
         server: ''
     })
-    
-    // request to get data from the database
-    const getRequest=async()=>{
-        await axios.get(API_SERVER_URL)
-        .then(response=>{
-          setData(response.data);
-        }).catch(error=>{
-          console.log(error);
-        })
-      }
 
-      useEffect(()=>{
-        getRequest();
-      },[])
+      useEffect(() => {
+        axios.get(API_SERVER_URL)
+        .then((response) => setData(response.data))
+        .catch((error) => console.log(error));
+    },[data]);
 
     return (
       <div>

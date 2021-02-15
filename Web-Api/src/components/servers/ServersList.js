@@ -7,7 +7,7 @@ import {Modal, ModalBody, ModalFooter} from 'reactstrap';
 import {API_SERVER_URL} from '../../apis/config';
 
 // Lists the visited servers
-const  ServersList = (props) => {
+const  ServersList = () => {
     
     // Data inicialization
     const {data} =  useContext(ServerContext);

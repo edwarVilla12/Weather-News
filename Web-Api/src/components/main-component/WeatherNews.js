@@ -16,7 +16,7 @@ const WeatherNews = () => {
     
     const {data, error, isLoading, setUrl} = UseFetch();
 
-    // error handling for the <News/> component
+    // error handling for the <WeatherList/> component
     const getContent = () => {
         if(error) return <h2>Error: {error}</h2>
         if(!data && isLoading) return <h2>LOADING DATA, PLEASE WAIT...</h2>
